@@ -6,15 +6,11 @@
   "scripts": {
     "android": "expo run android",
     "check": "expo install --fix",
-    "clean": "yarn cache clean --all && git clean -xdf",
-    "doctor": "yarn dlx @yarnpkg/doctor && npx expo-doctor@latest",
+    "clean": "git clean -xdf",
+    "doctor": "npx expo-doctor@latest",
     "ios": "expo run ios",
-    "lint": "yarn dlx @biomejs/biome check --apply .",
+    "lint": "./node_modules/.bin/biome check --apply .",
     "start": "expo start -c",
-    "update": "yarn upgrade-interactive",
-    "upgrade:tamagui": "yarn up '*tamagui*'@latest '@tamagui/*'@latest",
-    "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary",
-    "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -48,6 +44,5 @@
     "babel-preset-expo": "^10.0.1",
     "metro": "^0.80.7",
     "vercel": "latest"
-  },
-  "packageManager": "yarn@4.1.1"
+  }
 }
