@@ -1,8 +1,8 @@
+import { themeAtom } from '@/_layout'
 import { Monitor, Moon, Sun } from '@tamagui/lucide-icons'
 import { Tabs } from 'expo-router'
 import { useAtom } from 'jotai'
 import { Button, Text } from 'tamagui'
-import { themeAtom } from '../_layout'
 
 const icons = {
   dark: <Moon />,

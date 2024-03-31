@@ -3,7 +3,10 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "noEmit": true,
-    "strict": true
+    "strict": true,
+    "paths": {
+      "@/*": ["./app/*"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
   "exclude": ["node_modules"]

@@ -1,3 +1,4 @@
+import { type mode, themeWithToggle } from '@/atoms/theme'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
@@ -7,7 +8,6 @@ import { Appearance } from 'react-native'
 import { TamaguiProvider } from 'tamagui'
 import '../tamagui-web.css'
 import { config } from '../tamagui.config'
-import { type mode, themeWithToggle } from './atoms/theme'
 
 export {
   // Catch any errors thrown by the Layout component.
