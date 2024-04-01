@@ -1,1 +1,61 @@
-note because this is in a monorepo had to remove react, react-dom, and react-native-web deps and change metro.config.js a bit.
+# Tamagui + Expo
+
+```sh
+npm create tamagui@latest --template expo-router
+```
+
+## 🔦 About
+
+This repo is a starter for an [Expo + Tamagui](https://tamagui.dev/docs/guides/expo) app.
+
+## 📦 Included packages
+
+- [Tamagui](https://tamagui.dev) 🪄
+- Expo SDK
+- Expo Router
+
+## 🗂 Folder layout
+
+The main apps are:
+
+- `app` you'll be importing most files from `app/`
+
+## 🏁 Start the app
+
+- Install dependencies: `yarn` or `yarn install`
+
+- Web local dev: `yarn web`
+
+- Android local dev: `yarn android`
+
+- Ios local dev: `yarn ios`
+
+## UI Kit
+
+Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
+
+## 🆕 Add new dependencies
+
+### Pure JS dependencies
+
+If you're installing a JavaScript-only dependency that will be used across platforms, install it as example:
+
+```sh
+yarn add zustand
+```
+
+## Update new dependencies
+
+### Pure JS dependencies
+
+```sh
+yarn upgrade-interactive
+```
+
+## Deploying to Vercel
+
+- Config in `vercel.json` file
+- Build command: leave default setting
+- Output dir: leave default setting
+- Build preview version with `vercel build` or production with `vercel build --prod`
+- Then deploy the preview with `vercel --prebuilt` or production with `vercel --prod --prebuilt`

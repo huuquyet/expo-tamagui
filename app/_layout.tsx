@@ -1,6 +1,6 @@
 import { type mode, themeWithToggle } from '@/atoms/theme'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { useFonts } from 'expo-font'
+import { useFonts, Inter_400Regular, Inter_900Black } from '@expo-google-fonts/inter'
 import { SplashScreen, Stack } from 'expo-router'
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
@@ -26,8 +26,8 @@ SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const [interLoaded, interError] = useFonts({
-    Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
-    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
+    Inter_400Regular,
+    Inter_900Black,
   })
 
   useEffect(() => {
