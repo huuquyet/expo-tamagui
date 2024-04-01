@@ -1,6 +1,7 @@
 import { type mode, themeWithToggle } from '@/atoms/theme'
+import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { useFonts, Inter_400Regular, Inter_900Black } from '@expo-google-fonts/inter'
+import '@tamagui/core/reset.css'
 import { SplashScreen, Stack } from 'expo-router'
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
@@ -19,7 +20,7 @@ export const unstable_settings = {
   initialRouteName: '(tabs)',
 }
 
-export const themeAtom = themeWithToggle('dark' as mode)
+export const themeAtom = themeWithToggle('light' as mode)
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
@@ -55,13 +56,13 @@ function RootLayoutNav() {
   }
 
   return (
-    <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
-      <TamaguiProvider config={config} defaultTheme={current()}>
+    <TamaguiProvider config={config} defaultTheme={current()} disableInjectCSS>
+      <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
         </Stack>
-      </TamaguiProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </TamaguiProvider>
   )
 }

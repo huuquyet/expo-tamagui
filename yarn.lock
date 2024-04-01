@@ -4104,7 +4104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/core@npm:1.94.0":
+"@tamagui/core@npm:1.94.0, @tamagui/core@npm:latest":
   version: 1.94.0
   resolution: "@tamagui/core@npm:1.94.0"
   dependencies:
@@ -8200,6 +8200,7 @@ __metadata:
     "@tamagui/babel-plugin": "npm:latest"
     "@tamagui/config": "npm:latest"
     "@tamagui/constants": "npm:latest"
+    "@tamagui/core": "npm:latest"
     "@tamagui/lucide-icons": "npm:latest"
     "@tamagui/metro-plugin": "npm:latest"
     "@types/react": "npm:^18.2.73"
