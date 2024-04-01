@@ -1,7 +1,6 @@
 import { type mode, themeWithToggle } from '@/atoms/theme'
 import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import '@tamagui/core/reset.css'
 import { SplashScreen, Stack } from 'expo-router'
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
