@@ -5262,6 +5262,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@vercel/analytics@npm:1.2.2"
+  dependencies:
+    server-only: "npm:^0.0.1"
+  peerDependencies:
+    next: ">= 13"
+    react: ^18 || ^19
+  peerDependenciesMeta:
+    next:
+      optional: true
+    react:
+      optional: true
+  checksum: 10/18b9e006249e1df214c65e4fdb0672522edf4f690b57e460e714b2119faf0f872ddecc92f543797533cb26b9a09308821e30554b2329b17f46eff769a5f9f855
+  languageName: node
+  linkType: hard
+
 "@vercel/build-utils@npm:7.11.0":
   version: 7.11.0
   resolution: "@vercel/build-utils@npm:7.11.0"
@@ -8101,6 +8118,7 @@ __metadata:
     "@tamagui/lucide-icons": "npm:latest"
     "@tamagui/metro-plugin": "npm:latest"
     "@types/react": "npm:^18.2.74"
+    "@vercel/analytics": "npm:^1.2.2"
     babel-preset-expo: "npm:^10.0.1"
     expo: "npm:^50.0.14"
     expo-asset: "npm:^9.0.2"
@@ -12675,6 +12693,13 @@ __metadata:
     parseurl: "npm:~1.3.3"
     send: "npm:0.18.0"
   checksum: 10/699b2d4c29807a51d9b5e0f24955346911437aebb0178b3c4833ad30d3eca93385ff9927254f5c16da345903cad39d9cd4a532198c95a5129cc4ed43911b15a4
+  languageName: node
+  linkType: hard
+
+"server-only@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "server-only@npm:0.0.1"
+  checksum: 10/c432348956641ea3f460af8dc3765f3a1bdbcf7a1e0205b0756d868e6e6fe8934cdee6bff68401a1dd49ba4a831c75916517a877446d54b334f7de36fa273e53
   languageName: node
   linkType: hard
 

@@ -24,6 +24,7 @@
     "@tamagui/constants": "latest",
     "@tamagui/lucide-icons": "latest",
     "@tamagui/metro-plugin": "latest",
+    "@vercel/analytics": "^1.2.2",
     "expo": "^50.0.14",
     "expo-asset": "^9.0.2",
     "expo-font": "^11.10.3",
