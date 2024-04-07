@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { ScrollViewStyleReset } from 'expo-router/html'
 import { config } from '../tamagui.config'
 
@@ -31,7 +32,10 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: config.getCSS() }} />
         {/* Add any additional <head> elements that you want globally available on web... */}
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
