@@ -40,6 +40,7 @@ yarn-error.log*
 
 # production
 /build
+/dist
 
 # local env files
 .env.local
@@ -48,7 +49,7 @@ yarn-error.log*
 .env.production.local
 
 # vercel
-**/.vercel/
+.vercel
 
 # typescript
 *.tsbuildinfo
@@ -63,4 +64,3 @@ thumbs.db
 
 # IDE
 .idea
-.vercel

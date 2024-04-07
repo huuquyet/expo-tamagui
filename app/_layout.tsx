@@ -1,6 +1,7 @@
 import { type mode, themeWithToggle } from '@/atoms/theme'
 import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
+import { inject } from '@vercel/analytics'
 import { SplashScreen, Stack } from 'expo-router'
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
@@ -29,6 +30,8 @@ export default function RootLayout() {
     Inter_400Regular,
     Inter_900Black,
   })
+
+  inject()
 
   useEffect(() => {
     if (interLoaded || interError) {

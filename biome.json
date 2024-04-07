@@ -13,6 +13,7 @@
       "./.tamagui",
       "./.next",
       "./.expo",
+      "./.vercel",
       "./dist",
       "./types",
       "./public",
