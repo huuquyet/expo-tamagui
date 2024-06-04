@@ -1,12 +1,16 @@
 import { Link } from 'expo-router'
-import { Button, Text } from 'tamagui'
+import { Button, Text, View } from 'tamagui'
 
 export default function TabOneScreen() {
   return (
-    <Link href="/modal" asChild>
-      <Button flex={1} alignItems="center">
-        <Text fontSize={20}>Hello!</Text>
-      </Button>
-    </Link>
+    <View flex={1} jc="center" ai="center">
+      <Link href="/modal" asChild>
+        <Button>
+          <Text fontSize={20} color="$blue10">
+            Hello!
+          </Text>
+        </Button>
+      </Link>
+    </View>
   )
 }

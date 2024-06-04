@@ -15,6 +15,10 @@ module.exports = withTamagui(config, {
   outputCSS: './tamagui-web.css',
 })
 
+config.resolver.sourceExts.push('mjs')
+
+module.exports = config
+
 // REMOVE THIS (just for tamagui internal devs to work in monorepo):
 // if (process.env.IS_TAMAGUI_DEV && __dirname.includes('tamagui')) {
 //   const fs = require('fs')

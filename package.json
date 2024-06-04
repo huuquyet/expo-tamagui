@@ -3,7 +3,6 @@
   "description": "Clone of Tamagui starters expo-router",
   "main": "expo-router/entry",
   "version": "0.1.0",
-  "type": "module",
   "scripts": {
     "android": "bunx expo run android",
     "check": "bunx expo install --fix",
@@ -20,6 +19,7 @@
     "@tamagui/constants": "latest",
     "@tamagui/font-inter": "latest",
     "@tamagui/lucide-icons": "latest",
+    "@tamagui/toast": "latest",
     "@tamagui/metro-plugin": "latest",
     "expo": "^51.0.9",
     "expo-asset": "~10.0.6",
@@ -42,7 +42,9 @@
     "@biomejs/biome": "^1.7.3",
     "@expo/metro-runtime": "^3.2.1",
     "@types/react": "~18.2.79",
+    "@types/react-native": "^0.73.0",
     "babel-preset-expo": "~11.0.0",
+    "burnt": "^0.12.2",
     "metro": "^0.80.9",
     "vercel": "latest"
   }

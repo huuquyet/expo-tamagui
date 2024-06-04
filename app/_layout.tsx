@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { Appearance } from 'react-native'
 import { TamaguiProvider } from 'tamagui'
 import '../tamagui-web.css'
+import { ToastProvider } from '@tamagui/toast'
 import { config } from '../tamagui.config'
 import { type mode, themeWithToggle } from './atoms/theme'
 
@@ -57,10 +58,15 @@ function RootLayoutNav() {
   return (
     <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
       <TamaguiProvider config={config} defaultTheme={current()}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
+        <ToastProvider swipeDirection="horizontal" duration={3000}>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="modal"
+              options={{ presentation: 'modal', title: 'Tamagui + Expo' }}
+            />
+          </Stack>
+        </ToastProvider>
       </TamaguiProvider>
     </ThemeProvider>
   )
