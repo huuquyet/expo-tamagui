@@ -1,5 +1,5 @@
 import { Toast, useToastController, useToastState } from '@tamagui/toast'
-import { Button, H4, XStack, YStack } from 'tamagui'
+import { Button, H4, XStack, YStack, isWeb } from 'tamagui'
 
 export function CurrentToast() {
   const currentToast = useToastState()
@@ -10,14 +10,13 @@ export function CurrentToast() {
     <Toast
       key={currentToast.id}
       duration={currentToast.duration}
-      y={0}
-      t={-25}
+      viewportName={currentToast.viewportName}
       enterStyle={{ opacity: 0, scale: 0.5, y: -25 }}
       exitStyle={{ opacity: 0, scale: 1, y: -20 }}
-      animation="quick"
-      viewportName={currentToast.viewportName}
+      y={isWeb ? '$12' : 0}
       theme="purple"
       br="$6"
+      animation="quick"
     >
       <YStack ai="center" p="$2" gap="$2">
         <Toast.Title fow="bold">{currentToast.title}</Toast.Title>
@@ -32,7 +31,7 @@ export function ToastControl() {
 
   return (
     <YStack gap="$2" ai="center">
-      <H4 col="$color1">Toast demo</H4>
+      <H4>Toast demo</H4>
       <XStack gap="$2" jc="center">
         <Button
           onPress={() => {
