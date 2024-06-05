@@ -1,14 +1,9 @@
-import { type mode, themeWithToggle } from '@/atoms/theme'
 import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { inject } from '@vercel/analytics'
 import { SplashScreen, Stack } from 'expo-router'
-import { useAtom } from 'jotai'
 import { useEffect } from 'react'
-import { Appearance } from 'react-native'
-import { TamaguiProvider } from 'tamagui'
 import '../tamagui-web.css'
-import { config } from '../tamagui.config'
+import { Analytics } from '@vercel/analytics/react'
+import { Provider } from 'app/Provider'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -20,8 +15,6 @@ export const unstable_settings = {
   initialRouteName: '(tabs)',
 }
 
-export const themeAtom = themeWithToggle('light' as mode)
-
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
 
@@ -30,8 +23,6 @@ export default function RootLayout() {
     Inter_400Regular,
     Inter_900Black,
   })
-
-  inject()
 
   useEffect(() => {
     if (interLoaded || interError) {
@@ -48,23 +39,28 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const [scheme] = useAtom(themeAtom)
-
-  const current = () => {
-    if (scheme === ('system' as mode)) {
-      return Appearance.getColorScheme() as mode
-    }
-    return scheme
-  }
-
   return (
-    <TamaguiProvider config={config} defaultTheme={current()} disableInjectCSS>
-      <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
-      </ThemeProvider>
-    </TamaguiProvider>
+    <Provider defaultTheme="dark">
+      <Stack>
+        <Stack.Screen
+          name="(tabs)"
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="modal"
+          options={{
+            title: 'Tamagui + Expo',
+            presentation: 'modal',
+            animation: 'slide_from_right',
+            gestureEnabled: true,
+            gestureDirection: 'horizontal',
+          }}
+        />
+      </Stack>
+      <Analytics />
+    </Provider>
   )
 }

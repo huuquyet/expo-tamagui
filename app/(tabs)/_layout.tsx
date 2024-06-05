@@ -1,8 +1,8 @@
-import { themeAtom } from '@/_layout'
-import { Monitor, Moon, Sun } from '@tamagui/lucide-icons'
+import { Atom, AudioWaveform, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
+import { themeAtom } from 'app/Provider'
 import { Tabs } from 'expo-router'
 import { useAtom } from 'jotai'
-import { Button, Text } from 'tamagui'
+import { Button } from 'tamagui'
 
 const icons = {
   dark: <Moon />,
@@ -21,7 +21,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Tab One',
-          tabBarIcon: ({ color }) => <Text>Hello!</Text>,
+          tabBarIcon: ({ color }) => <Atom color={color} />,
           headerRight: () => <ThemeButton />,
         }}
       />
@@ -29,7 +29,7 @@ export default function TabLayout() {
         name="two"
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <Text>Hello!</Text>,
+          tabBarIcon: ({ color }) => <AudioWaveform color={color} />,
           headerRight: () => <ThemeButton />,
         }}
       />

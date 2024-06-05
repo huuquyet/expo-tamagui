@@ -22,13 +22,13 @@ The main apps are:
 
 ## 🏁 Start the app
 
-- Install dependencies: `yarn` or `yarn install`
+- Install dependencies: `bun` or `bun install`
 
-- Web local dev: `yarn web`
+- Web local dev: `bun web`
 
-- Android local dev: `yarn android`
+- Android local dev: `bun android`
 
-- Ios local dev: `yarn ios`
+- Ios local dev: `bun ios`
 
 ## UI Kit
 
@@ -41,7 +41,7 @@ Note we're following the [design systems guide](https://tamagui.dev/docs/guides/
 If you're installing a JavaScript-only dependency that will be used across platforms, install it as example:
 
 ```sh
-yarn add zustand
+bun add jotai
 ```
 
 ## Update new dependencies
@@ -49,7 +49,7 @@ yarn add zustand
 ### Pure JS dependencies
 
 ```sh
-yarn upgrade-interactive
+bun update
 ```
 
 ## Deploying to Vercel
