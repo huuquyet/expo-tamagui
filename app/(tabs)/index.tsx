@@ -1,10 +1,9 @@
+import { ToastControl } from '@/CurrentToast'
 import { ExternalLink } from '@tamagui/lucide-icons'
-import { ToastControl } from 'app/CurrentToast'
-import { Link } from 'expo-router'
-import { Anchor, Button, H2, Paragraph, XStack, YStack } from 'tamagui'
+import { Anchor, H2, Paragraph, XStack, YStack } from 'tamagui'
 export default function TabOneScreen() {
   return (
-    <YStack f={1} ai="center" gap="$8" px="$10" pt="$5" bg="$background">
+    <YStack f={1} ai="center" gap="$8" px="$10" pt="$5">
       <H2>Tamagui + Expo</H2>
 
       <ToastControl />

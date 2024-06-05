@@ -1,9 +1,10 @@
+import '../tamagui-web.css'
+
+import { Provider } from '@/Provider'
 import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
+import { inject } from '@vercel/analytics'
 import { SplashScreen, Stack } from 'expo-router'
 import { useEffect } from 'react'
-import '../tamagui-web.css'
-import { inject } from '@vercel/analytics'
-import { Provider } from 'app/Provider'
 
 export {
   // Catch any errors thrown by the Layout component.

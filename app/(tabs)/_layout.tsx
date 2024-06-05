@@ -1,8 +1,8 @@
+import { themeAtom } from '@/Provider'
 import { Atom, AudioWaveform, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
-import { themeAtom } from 'app/Provider'
 import { Link, Tabs } from 'expo-router'
 import { useAtom } from 'jotai'
-import { Button, XStack } from 'tamagui'
+import { Button, XStack, useTheme } from 'tamagui'
 
 const icons = {
   dark: <Moon />,
@@ -11,10 +11,12 @@ const icons = {
 }
 
 export default function TabLayout() {
+  const theme = useTheme()
+
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'red',
+        tabBarActiveTintColor: theme.red10.val,
       }}
     >
       <Tabs.Screen

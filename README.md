@@ -57,5 +57,5 @@ bun update
 - Config in `vercel.json` file
 - Build command: leave default setting
 - Output dir: leave default setting
-- Build preview version with `vercel build` or production with `vercel build --prod`
-- Then deploy the preview with `vercel --prebuilt` or production with `vercel --prod --prebuilt`
+- Build preview version with `bunx vercel build` or production with `bunx vercel build --prod`
+- Then deploy the preview with `bunx vercel --prebuilt` or production with `bunx vercel --prod --prebuilt`

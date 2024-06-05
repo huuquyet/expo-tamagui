@@ -1,7 +1,7 @@
+import { CurrentToast } from '@/CurrentToast'
+import { type mode, themeWithToggle } from '@/atoms/theme'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { ToastProvider, ToastViewport } from '@tamagui/toast'
-import { CurrentToast } from 'app/CurrentToast'
-import { type mode, themeWithToggle } from 'app/atoms/theme'
 import { useAtom } from 'jotai'
 import { Appearance } from 'react-native'
 import { TamaguiProvider, type TamaguiProviderProps } from 'tamagui'
@@ -38,7 +38,7 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
         >
           {children}
           <CurrentToast />
-          <ToastViewport top="$8" left={0} right={0} />
+          <ToastViewport t="$8" l={0} r={0} />
         </ToastProvider>
       </ThemeProvider>
     </TamaguiProvider>
