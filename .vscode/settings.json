@@ -5,7 +5,7 @@
   "editor.tabCompletion": "on",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json, yarn.lock, bun.lockb",
+    "package.json": "package-lock.json, yarn.lock, bun.lockb"
   },
   "javascript.inlayHints.parameterNames.enabled": "all",
   "search.exclude": {
@@ -17,5 +17,5 @@
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.tsdk": ".yarn/sdks/typescript/lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

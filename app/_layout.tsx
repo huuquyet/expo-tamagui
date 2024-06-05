@@ -2,7 +2,7 @@ import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/i
 import { SplashScreen, Stack } from 'expo-router'
 import { useEffect } from 'react'
 import '../tamagui-web.css'
-import { Analytics } from '@vercel/analytics/react'
+import { inject } from '@vercel/analytics'
 import { Provider } from 'app/Provider'
 
 export {
@@ -35,6 +35,8 @@ export default function RootLayout() {
     return null
   }
 
+  inject()
+
   return <RootLayoutNav />
 }
 
@@ -60,7 +62,6 @@ function RootLayoutNav() {
           }}
         />
       </Stack>
-      <Analytics />
     </Provider>
   )
 }
