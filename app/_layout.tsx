@@ -24,8 +24,6 @@ export default function RootLayout() {
     Inter_900Black,
   })
 
-  inject()
-
   useEffect(() => {
     if (interLoaded || interError) {
       // Hide the splash screen after the fonts have loaded (or an error was returned) and the UI is ready.
