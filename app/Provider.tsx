@@ -20,12 +20,12 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
   }
 
   return (
-    <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
-      <TamaguiProvider
-        config={config}
-        defaultTheme={current() === 'dark' ? 'dark' : 'light'}
-        {...rest}
-      >
+    <TamaguiProvider
+      config={config}
+      defaultTheme={current() === 'dark' ? 'dark' : 'light'}
+      {...rest}
+    >
+      <ThemeProvider value={current() === 'dark' ? DarkTheme : DefaultTheme}>
         <ToastProvider
           swipeDirection="horizontal"
           duration={6000}
@@ -40,7 +40,7 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
           <CurrentToast />
           <ToastViewport top="$8" left={0} right={0} />
         </ToastProvider>
-      </TamaguiProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </TamaguiProvider>
   )
 }

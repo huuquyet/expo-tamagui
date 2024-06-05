@@ -9,7 +9,7 @@
     "clean": "git clean -xdf",
     "doctor": "bunx expo-doctor@latest",
     "ios": "bunx expo run ios",
-    "lint": "bunx @biomejs/biome check --apply .",
+    "lint": "bunx @biomejs/biome@1.8.0 check --write .",
     "start": "bunx expo start -c",
     "test": "bunx jest --watchAll",
     "web": "bunx expo start --web"

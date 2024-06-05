@@ -42,7 +42,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <Provider defaultTheme="dark">
+    <Provider>
       <Stack>
         <Stack.Screen
           name="(tabs)"

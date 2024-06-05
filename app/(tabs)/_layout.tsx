@@ -1,8 +1,8 @@
 import { Atom, AudioWaveform, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
 import { themeAtom } from 'app/Provider'
-import { Tabs } from 'expo-router'
+import { Link, Tabs } from 'expo-router'
 import { useAtom } from 'jotai'
-import { Button } from 'tamagui'
+import { Button, Text, XStack } from 'tamagui'
 
 const icons = {
   dark: <Moon />,
@@ -40,5 +40,15 @@ export default function TabLayout() {
 const ThemeButton = () => {
   const [theme, toggle] = useAtom(themeAtom)
 
-  return <Button icon={icons[theme]} onPress={() => toggle()} circular />
+  return (
+    <XStack mr="$4" gap="$2">
+      <Link href="/modal" asChild>
+        <Button>
+          <Text color="$blue10">Hello!</Text>
+        </Button>
+      </Link>
+
+      <Button icon={icons[theme]} onPress={() => toggle()} circular />
+    </XStack>
+  )
 }
