@@ -2,7 +2,7 @@ import { Atom, AudioWaveform, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
 import { themeAtom } from 'app/Provider'
 import { Link, Tabs } from 'expo-router'
 import { useAtom } from 'jotai'
-import { Button, Text, XStack } from 'tamagui'
+import { Button, XStack } from 'tamagui'
 
 const icons = {
   dark: <Moon />,
@@ -43,8 +43,8 @@ const ThemeButton = () => {
   return (
     <XStack mr="$4" gap="$2">
       <Link href="/modal" asChild>
-        <Button>
-          <Text color="$blue10">Hello!</Text>
+        <Button bg="$purple8" color="$purple12">
+          Hello!
         </Button>
       </Link>
 
