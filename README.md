@@ -22,7 +22,7 @@ The main apps are:
 
 ## 🏁 Start the app
 
-- Install dependencies: `bun` or `bun install`
+- Install dependencies: `bun install`
 
 - Web local dev: `bun web`
 
