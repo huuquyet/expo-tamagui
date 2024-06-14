@@ -17,5 +17,7 @@
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }
