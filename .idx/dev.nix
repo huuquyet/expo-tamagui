@@ -40,10 +40,10 @@
         web = {
           command = ["bun" "run" "web"]; # "--" "--port" "$PORT" "--hostname" "0.0.0.0"
           manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
+          env = {
+            # Environment variables to set for your server
+            PORT = "$PORT";
+          };
         };
       };
     };
