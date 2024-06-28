@@ -1,5 +1,4 @@
 import '../tamagui-web.css'
-
 import { Provider } from '@/Provider'
 import { Inter_400Regular, Inter_900Black, useFonts } from '@expo-google-fonts/inter'
 import { inject } from '@vercel/analytics'
